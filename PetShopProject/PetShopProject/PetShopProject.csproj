@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B6816E2B-99BD-4F1B-8A13-4DD7A94BC270}</ProjectGuid>
+    <ProjectGuid>{E55792B2-EA0B-4A17-BBC1-ABC856E59C1A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PetShop</RootNamespace>
-    <AssemblyName>PetShop</AssemblyName>
+    <RootNamespace>PetShopProject</RootNamespace>
+    <AssemblyName>PetShopProject</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,10 +52,19 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,64 +90,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\32752012_374348339639748_8966757361645518848_n.png" />
+    <None Include="Resources\close_24_blue.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\32752012_374348339639748_8966757361645518848_n1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add 24 purple.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add 24 white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close 24 purple.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close 24 white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close 24 white1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete bin 24 dark red.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete bin 24 purple.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete bin 24 white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\edit 24 purple.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\edit 24 white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\edit 24 white1.png" />
+    <None Include="Resources\close_24_white.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-customer-32.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-lock-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sign in bg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tick 24 white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tick_purple_24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\update 24 purple.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\update 24 white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

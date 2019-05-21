@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShop
+namespace PetShopProject
 {
     public partial class frmLogin : Form
     {
@@ -205,7 +205,7 @@ namespace PetShop
         {
             // this.btnSignIn.BackgroundImage = ((System.Drawing.Image)
             //(Project_1.Properties.Resources.Sign_in_bg));
-            this.btnSignIn.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnSignIn.BackColor = System.Drawing.Color.RoyalBlue;
 
         }
 
@@ -218,7 +218,7 @@ namespace PetShop
         {
             //this.btnSignIn.BackgroundImage = ((System.Drawing.Image)
             //(Project_1.Properties.Resources.Sign_in_bg));
-            this.btnSignIn.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnSignIn.BackColor = System.Drawing.Color.RoyalBlue;
 
         }
 
@@ -227,6 +227,17 @@ namespace PetShop
             this.btnSignIn.BackColor = System.Drawing.Color.Black;
 
         }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            this.btnClose.Image = (System.Drawing.Image)(PetShopProject.Properties.Resources.close_24_blue);
+
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            this.btnClose.Image = (System.Drawing.Image)(PetShopProject.Properties.Resources.close_24_white);
+
+        }
     }
 }
-
