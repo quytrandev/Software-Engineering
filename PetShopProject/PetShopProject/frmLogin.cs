@@ -205,13 +205,16 @@ namespace PetShopProject
         {
             // this.btnSignIn.BackgroundImage = ((System.Drawing.Image)
             //(Project_1.Properties.Resources.Sign_in_bg));
-            this.btnSignIn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSignIn.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnSignIn.ForeColor = Color.RoyalBlue;
+
 
         }
 
         private void btnSignIn_MouseLeave(object sender, EventArgs e)
         {
-            this.btnSignIn.BackColor = System.Drawing.Color.Black;
+            this.btnSignIn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSignIn.ForeColor = Color.Gainsboro;
         }
 
         private void btnSignIn_Enter(object sender, EventArgs e)

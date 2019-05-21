@@ -29,5 +29,16 @@ namespace PetShopProject
             this.btnClose.Image = (System.Drawing.Image)(PetShopProject.Properties.Resources.close_24_white);
 
         }
+
+        private void btnLogOut_MouseEnter(object sender, EventArgs e)
+        {
+            this.btnLogOut.ForeColor=System.Drawing.Color.RoyalBlue;
+        }
+
+        private void btnLogOut_MouseLeave(object sender, EventArgs e)
+        {
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+
+        }
     }
 }
