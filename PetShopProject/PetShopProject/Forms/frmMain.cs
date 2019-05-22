@@ -13,9 +13,15 @@ namespace PetShopProject
 {
     public partial class frmMain : Form
     {
+        ucProducts ucProducts = new ucProducts();
         public frmMain()
         {
             InitializeComponent();
+        }
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            this.Controls.Add(ucProducts);
+            ucProducts.Location = new Point(312, 51);
         }
 
         private void btnClose_MouseEnter(object sender, EventArgs e)
@@ -38,6 +44,18 @@ namespace PetShopProject
         private void btnLogOut_MouseLeave(object sender, EventArgs e)
         {
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
+
+        }
+
+        private void btnProducts_MouseEnter(object sender, EventArgs e)
+        {
+            this.btnProducts.ForeColor = System.Drawing.Color.RoyalBlue;
+
+        }
+
+        private void btnProducts_MouseLeave(object sender, EventArgs e)
+        {
+            this.btnProducts.ForeColor = System.Drawing.Color.White;
 
         }
     }
