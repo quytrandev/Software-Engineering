@@ -53,7 +53,6 @@
             this.dgvProduct.RowTemplate.Height = 24;
             this.dgvProduct.Size = new System.Drawing.Size(1001, 515);
             this.dgvProduct.TabIndex = 1;
-            this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             // 
             // ProductID
             // 
@@ -74,7 +73,7 @@
             this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Location = new System.Drawing.Point(11, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1001, 120);
+            this.panel1.Size = new System.Drawing.Size(1001, 135);
             this.panel1.TabIndex = 7;
             // 
             // btnDelete
@@ -87,11 +86,13 @@
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = global::PetShopProject.Properties.Resources.delete_24_white;
-            this.btnDelete.Location = new System.Drawing.Point(890, 69);
+            this.btnDelete.Location = new System.Drawing.Point(889, 71);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(111, 48);
             this.btnDelete.TabIndex = 11;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.MouseEnter += new System.EventHandler(this.btnDelete_MouseEnter);
+            this.btnDelete.MouseLeave += new System.EventHandler(this.btnDelete_MouseLeave);
             // 
             // btnEdit
             // 
@@ -103,15 +104,18 @@
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = global::PetShopProject.Properties.Resources.edit_24_white;
-            this.btnEdit.Location = new System.Drawing.Point(774, 69);
+            this.btnEdit.Location = new System.Drawing.Point(773, 71);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(111, 48);
             this.btnEdit.TabIndex = 10;
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.MouseEnter += new System.EventHandler(this.btnEdit_MouseEnter);
+            this.btnEdit.MouseLeave += new System.EventHandler(this.btnEdit_MouseLeave);
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
             this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
@@ -119,18 +123,20 @@
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::PetShopProject.Properties.Resources.add_24_white;
-            this.btnAdd.Location = new System.Drawing.Point(657, 69);
+            this.btnAdd.Location = new System.Drawing.Point(656, 71);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(111, 48);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.MouseEnter += new System.EventHandler(this.btnAdd_MouseEnter);
+            this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
             // 
             // lblHr
             // 
             this.lblHr.AutoSize = true;
             this.lblHr.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHr.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblHr.Location = new System.Drawing.Point(-1, 48);
+            this.lblHr.Location = new System.Drawing.Point(-1, 50);
             this.lblHr.Name = "lblHr";
             this.lblHr.Size = new System.Drawing.Size(1007, 12);
             this.lblHr.TabIndex = 8;
