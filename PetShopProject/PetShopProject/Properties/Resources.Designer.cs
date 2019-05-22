@@ -63,6 +63,26 @@ namespace PetShopProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_24_blue {
+            get {
+                object obj = ResourceManager.GetObject("add_24_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_24_white {
+            get {
+                object obj = ResourceManager.GetObject("add_24_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_24_blue {
             get {
                 object obj = ResourceManager.GetObject("close_24_blue", resourceCulture);
@@ -76,6 +96,46 @@ namespace PetShopProject.Properties {
         internal static System.Drawing.Bitmap close_24_white {
             get {
                 object obj = ResourceManager.GetObject("close_24_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_24_red {
+            get {
+                object obj = ResourceManager.GetObject("delete_24_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_24_white {
+            get {
+                object obj = ResourceManager.GetObject("delete_24_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_24_blue {
+            get {
+                object obj = ResourceManager.GetObject("edit_24_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_24_white {
+            get {
+                object obj = ResourceManager.GetObject("edit_24_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

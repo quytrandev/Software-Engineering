@@ -119,5 +119,23 @@
   <ItemGroup>
     <Folder Include="User Controls\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_24_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_24_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_24_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_24_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_24_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_24_white.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

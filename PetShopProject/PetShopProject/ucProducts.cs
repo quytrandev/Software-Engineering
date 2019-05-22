@@ -48,5 +48,46 @@ namespace PetShopProject
 
             }
         }
+
+        private void btnAdd_MouseEnter(object sender, EventArgs e)
+        {
+            this.btnAdd.Image = (System.Drawing.Image)(PetShopProject.Properties.Resources.add_24_blue);
+
+        }
+
+        private void btnAdd_MouseLeave(object sender, EventArgs e)
+        {
+            this.btnAdd.Image = (System.Drawing.Image)(PetShopProject.Properties.Resources.add_24_white);
+
+        }
+
+        private void btnEdit_MouseEnter(object sender, EventArgs e)
+        {
+            this.btnEdit.Image = (System.Drawing.Image)(PetShopProject.Properties.Resources.edit_24_blue);
+
+        }
+
+        private void btnEdit_MouseLeave(object sender, EventArgs e)
+        {
+            this.btnEdit.Image = (System.Drawing.Image)(PetShopProject.Properties.Resources.edit_24_white);
+
+        }
+
+        private void btnDelete_MouseEnter(object sender, EventArgs e)
+        {
+            this.btnDelete.Image = (System.Drawing.Image)(PetShopProject.Properties.Resources.delete_24_red);
+
+        }
+
+        private void btnDelete_MouseLeave(object sender, EventArgs e)
+        {
+            this.btnDelete.Image = (System.Drawing.Image)(PetShopProject.Properties.Resources.delete_24_white);
+
+        }
+
+        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
