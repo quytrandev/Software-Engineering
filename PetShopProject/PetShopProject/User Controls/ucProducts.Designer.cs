@@ -29,40 +29,41 @@
         private void InitializeComponent()
         {
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblHr = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.MaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLoaiSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhaSanXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvProduct
             // 
+            this.dgvProduct.AllowUserToAddRows = false;
+            this.dgvProduct.AllowUserToDeleteRows = false;
             this.dgvProduct.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ProductID,
-            this.ProductName});
+            this.MaSanPham,
+            this.TenSanPham,
+            this.GiaBan,
+            this.SoLuongSP,
+            this.MaLoaiSP,
+            this.NhaSanXuat});
             this.dgvProduct.Location = new System.Drawing.Point(11, 144);
             this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowTemplate.Height = 24;
             this.dgvProduct.Size = new System.Drawing.Size(1001, 515);
             this.dgvProduct.TabIndex = 1;
-            // 
-            // ProductID
-            // 
-            this.ProductID.HeaderText = "Product ID";
-            this.ProductID.Name = "ProductID";
-            // 
-            // ProductName
-            // 
-            this.ProductName.HeaderText = "Product Name";
-            this.ProductName.Name = "ProductName";
             // 
             // panel1
             // 
@@ -155,6 +156,47 @@
             this.lblTitle.TabIndex = 7;
             this.lblTitle.Text = "Product Management";
             // 
+            // MaSanPham
+            // 
+            this.MaSanPham.DataPropertyName = "MaSanPham";
+            this.MaSanPham.HeaderText = "Product ID";
+            this.MaSanPham.Name = "MaSanPham";
+            this.MaSanPham.Width = 110;
+            // 
+            // TenSanPham
+            // 
+            this.TenSanPham.DataPropertyName = "TenSanPham";
+            this.TenSanPham.HeaderText = "Product Name";
+            this.TenSanPham.Name = "TenSanPham";
+            this.TenSanPham.Width = 330;
+            // 
+            // GiaBan
+            // 
+            this.GiaBan.DataPropertyName = "GiaBan";
+            this.GiaBan.HeaderText = "Price";
+            this.GiaBan.Name = "GiaBan";
+            this.GiaBan.Width = 80;
+            // 
+            // SoLuongSP
+            // 
+            this.SoLuongSP.DataPropertyName = "SoLuongSP";
+            this.SoLuongSP.HeaderText = "Quantity";
+            this.SoLuongSP.Name = "SoLuongSP";
+            // 
+            // MaLoaiSP
+            // 
+            this.MaLoaiSP.DataPropertyName = "MaLoaiSP";
+            this.MaLoaiSP.HeaderText = "Product Type ID";
+            this.MaLoaiSP.Name = "MaLoaiSP";
+            this.MaLoaiSP.Width = 160;
+            // 
+            // NhaSanXuat
+            // 
+            this.NhaSanXuat.DataPropertyName = "NhaSanXuat";
+            this.NhaSanXuat.HeaderText = "From";
+            this.NhaSanXuat.Name = "NhaSanXuat";
+            this.NhaSanXuat.Width = 150;
+            // 
             // ucProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -174,13 +216,17 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dgvProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblHr;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSanPham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSanPham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NhaSanXuat;
     }
 }

@@ -60,10 +60,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ucProducts.cs">
+    <Compile Include="User Controls\ucProducts.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucProducts.Designer.cs">
+    <Compile Include="User Controls\ucProducts.Designer.cs">
       <DependentUpon>ucProducts.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\frmLogin.resx">
@@ -82,7 +82,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ucProducts.resx">
+    <EmbeddedResource Include="User Controls\ucProducts.resx">
       <DependentUpon>ucProducts.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -116,9 +116,7 @@
   <ItemGroup>
     <None Include="Resources\panda1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="User Controls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\add_24_blue.png" />
   </ItemGroup>
@@ -136,6 +134,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete_24_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PetShopProject.Business\PetShopProject.Business.csproj">
+      <Project>{d19dcaf1-8943-450e-b2db-bbcafcbb69bd}</Project>
+      <Name>PetShopProject.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PetShopProject.DAL\PetShopProject.DAL.csproj">
+      <Project>{6cabd23f-4ab1-449e-bcae-f2363b979c6d}</Project>
+      <Name>PetShopProject.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

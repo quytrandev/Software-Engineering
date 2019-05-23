@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PetShopProject.Business;
+using PetShopProject.DAL.Models;
 
 namespace PetShopProject
 {
     public partial class ucProducts : UserControl
     {
+        private ProductBusiness productBusiness;
         public ucProducts()
         {
+            productBusiness = new ProductBusiness();
             InitializeComponent();
             customDgvProduct();
         }
@@ -35,18 +39,21 @@ namespace PetShopProject
             dgvProduct.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvProduct.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
             dgvProduct.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgvProduct.Columns["MaSanPham"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvProduct.Columns["MaLoaiSP"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvProduct.Columns["SoLuongSP"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgvProduct.Columns["GiaBan"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvProduct.Columns["NhaSanXuat"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
         }
 
         private void ucProducts_Load(object sender, EventArgs e)
         {
-            int n = 0;
-            for (int i = 0; i < 4; i++)
-            {
-                n = dgvProduct.Rows.Add();
-                dgvProduct.Rows[n].Cells[0].Value = "1";
-                dgvProduct.Rows[n].Cells[1].Value = "Pepsi";
-
-            }
+            var source = new BindingSource();
+            source.DataSource = productBusiness.GetProductList();
+            dgvProduct.DataSource = source;
         }
 
         private void btnAdd_MouseEnter(object sender, EventArgs e)
