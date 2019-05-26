@@ -17,13 +17,55 @@ namespace PetShopProject
         public frmMain()
         {
             InitializeComponent();
+            ucProducts.Visible = false;
         }
         private void btnProducts_Click(object sender, EventArgs e)
         {
             this.Controls.Add(ucProducts);
             ucProducts.Location = new Point(312, 51);
+            if (ucProducts.Visible == true)
+            {
+                ucProducts.Visible = false;
+            }
+            else
+            {
+                ucProducts.Visible = true;
+            }
         }
 
+        
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("Are you sure want to exit?", "Exit", buttons);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("Are you sure want to sign out?", "Logout", buttons);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                Form frm = new frmLogin();
+                frm.ShowDialog();
+            }
+            else
+            {
+
+            }
+           
+        }
+        #region MouseEnter/MouseLeave
         private void btnClose_MouseEnter(object sender, EventArgs e)
         {
             this.btnClose.Image = (System.Drawing.Image)(PetShopProject.Properties.Resources.close_24_blue);
@@ -38,7 +80,7 @@ namespace PetShopProject
 
         private void btnLogOut_MouseEnter(object sender, EventArgs e)
         {
-            this.btnLogOut.ForeColor=System.Drawing.Color.RoyalBlue;
+            this.btnLogOut.ForeColor = System.Drawing.Color.RoyalBlue;
         }
 
         private void btnLogOut_MouseLeave(object sender, EventArgs e)
@@ -58,5 +100,8 @@ namespace PetShopProject
             this.btnProducts.ForeColor = System.Drawing.Color.White;
 
         }
+
+        #endregion
+
     }
 }

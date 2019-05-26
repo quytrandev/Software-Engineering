@@ -116,7 +116,9 @@
   <ItemGroup>
     <None Include="Resources\panda1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\check_24_blue.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add_24_blue.png" />
   </ItemGroup>
@@ -144,6 +146,15 @@
       <Project>{6cabd23f-4ab1-449e-bcae-f2363b979c6d}</Project>
       <Name>PetShopProject.DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check_24_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_24_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1_24_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

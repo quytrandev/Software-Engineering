@@ -34,5 +34,25 @@ namespace PetShopProject.Business
             }
             return productLst;
         }
+        public DataTable GetProductTypeIDList()
+        {
+            DataTable dt = _productRepository.GetProductTypeIDList();
+            return dt;
+        }
+        public int AddProduct(ProductModel product)
+        {
+            int result = _productRepository.AddProduct(product);
+            return result;
+        }
+        public int EditProduct(ProductModel product)
+        {
+            int result = _productRepository.EditProduct(product);
+            return result;
+        }
+        public int DeleteProduct(string productID)
+        {
+            int result = _productRepository.DeleteProduct(productID);
+            return result;
+        }
     }
 }

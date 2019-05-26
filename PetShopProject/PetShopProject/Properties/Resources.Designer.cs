@@ -83,6 +83,26 @@ namespace PetShopProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap check_24_blue {
+            get {
+                object obj = ResourceManager.GetObject("check_24_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap check_24_white {
+            get {
+                object obj = ResourceManager.GetObject("check_24_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_24_blue {
             get {
                 object obj = ResourceManager.GetObject("close_24_blue", resourceCulture);
@@ -93,9 +113,29 @@ namespace PetShopProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close_24_red {
+            get {
+                object obj = ResourceManager.GetObject("close_24_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_24_white {
             get {
                 object obj = ResourceManager.GetObject("close_24_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close1_24_white {
+            get {
+                object obj = ResourceManager.GetObject("close1_24_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

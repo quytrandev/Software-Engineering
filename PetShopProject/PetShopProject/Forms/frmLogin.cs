@@ -19,36 +19,9 @@ namespace PetShopProject
             panel1.Location = new Point(
             this.ClientSize.Width / 2 - panel1.Size.Width / 2,
             this.ClientSize.Height / 2 - panel1.Size.Height / 2);
-            AutoLabel();
-            //mysql : 215 ; loc 803,620
-            //access: 213 width ; loc 803,620
-            //sql: 239 width, loc 777 620
-            //postgre: 246 width; loc 772 620
+           
         }
-        private void AutoLabel()
-        {
-            //if (version == "MySQL")
-            //{
-            //    lblVersion.Text = "Current database model: " + version;
-            //    lblVersion.Location = new Point(803, 620);
-            //}
-            //else if (version == "Access")
-            //{
-            //    lblVersion.Text = "Current database model: " + version;
-            //    lblVersion.Location = new Point(803, 620);
-
-            //}
-            //else if (version == "SQLServer")
-            //{
-            //    lblVersion.Text = "Current database model: " + version;
-            //    lblVersion.Location = new Point(777, 620);
-            //}
-            //else
-            //{
-            //    lblVersion.Text = "Current database model: " + version;
-            //    lblVersion.Location = new Point(772, 620);
-            //}
-        }
+       
         public static string UserName;
         // ẩn/hiện password
         private void ShowPassword()
@@ -191,11 +164,17 @@ namespace PetShopProject
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            //nút thoát frmLogin
-            this.Hide();
-            //Form frm = new frmQuit();//frm thông báo
-            //frm.ShowDialog();
-            this.Show();
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("Are you sure want to exit?", "Exit", buttons);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+
+            }
+            else
+            {
+
+            }
 
         }
 
