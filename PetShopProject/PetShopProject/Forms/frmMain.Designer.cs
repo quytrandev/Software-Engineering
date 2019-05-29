@@ -48,8 +48,9 @@
             this.pnlMenu.Controls.Add(this.btnLogOut);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(293, 639);
+            this.pnlMenu.Size = new System.Drawing.Size(220, 595);
             this.pnlMenu.TabIndex = 0;
             // 
             // btnProducts
@@ -63,9 +64,10 @@
             this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProducts.ForeColor = System.Drawing.Color.White;
-            this.btnProducts.Location = new System.Drawing.Point(0, 475);
+            this.btnProducts.Location = new System.Drawing.Point(0, 461);
+            this.btnProducts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(293, 82);
+            this.btnProducts.Size = new System.Drawing.Size(220, 67);
             this.btnProducts.TabIndex = 2;
             this.btnProducts.Text = "Products";
             this.btnProducts.UseVisualStyleBackColor = false;
@@ -76,9 +78,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-23, -57);
+            this.pictureBox1.Location = new System.Drawing.Point(-17, -46);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(342, 282);
+            this.pictureBox1.Size = new System.Drawing.Size(256, 229);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -94,9 +97,10 @@
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 557);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 528);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(293, 82);
+            this.btnLogOut.Size = new System.Drawing.Size(220, 67);
             this.btnLogOut.TabIndex = 0;
             this.btnLogOut.Text = "Sign out";
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -109,9 +113,10 @@
             this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(293, 0);
+            this.panel2.Location = new System.Drawing.Point(220, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(724, 32);
+            this.panel2.Size = new System.Drawing.Size(891, 26);
             this.panel2.TabIndex = 1;
             // 
             // btnClose
@@ -124,10 +129,9 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.Transparent;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(641, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Location = new System.Drawing.Point(829, -1);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(83, 33);
+            this.btnClose.Size = new System.Drawing.Size(62, 27);
             this.btnClose.TabIndex = 12;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -136,12 +140,13 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 639);
+            this.ClientSize = new System.Drawing.Size(1111, 595);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMain";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

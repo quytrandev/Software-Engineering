@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.MaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +42,10 @@
             this.lblHr = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlPostData = new System.Windows.Forms.Panel();
+            this.lblSpanRegExProductName = new System.Windows.Forms.Label();
+            this.lblSpanRegExFrom = new System.Windows.Forms.Label();
+            this.lblSpanRegExQuantity = new System.Windows.Forms.Label();
+            this.lblSpanRegExPrice = new System.Windows.Forms.Label();
             this.cbProductTypeID = new System.Windows.Forms.ComboBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.txtFrom = new System.Windows.Forms.TextBox();
@@ -58,11 +61,6 @@
             this.lblProductID = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAddData = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.lblSpanRegExPrice = new System.Windows.Forms.Label();
-            this.lblSpanRegExQuantity = new System.Windows.Forms.Label();
-            this.lblSpanRegExFrom = new System.Windows.Forms.Label();
-            this.lblSpanRegExProductName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlPostData.SuspendLayout();
@@ -81,11 +79,12 @@
             this.SoLuongSP,
             this.MaLoaiSP,
             this.NhaSanXuat});
-            this.dgvProduct.Location = new System.Drawing.Point(12, 133);
+            this.dgvProduct.Location = new System.Drawing.Point(15, 112);
+            this.dgvProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowTemplate.Height = 24;
-            this.dgvProduct.Size = new System.Drawing.Size(674, 441);
+            this.dgvProduct.Size = new System.Drawing.Size(843, 418);
             this.dgvProduct.TabIndex = 1;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             // 
@@ -143,9 +142,10 @@
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.lblHr);
             this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Location = new System.Drawing.Point(11, 3);
+            this.panel1.Location = new System.Drawing.Point(8, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1001, 124);
+            this.panel1.Size = new System.Drawing.Size(858, 101);
             this.panel1.TabIndex = 7;
             // 
             // btnDelete
@@ -158,7 +158,8 @@
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = global::PetShopProject.Properties.Resources.delete_24_white;
-            this.btnDelete.Location = new System.Drawing.Point(588, 72);
+            this.btnDelete.Location = new System.Drawing.Point(760, 55);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(90, 40);
             this.btnDelete.TabIndex = 11;
@@ -177,7 +178,8 @@
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = global::PetShopProject.Properties.Resources.edit_24_white;
-            this.btnEdit.Location = new System.Drawing.Point(492, 72);
+            this.btnEdit.Location = new System.Drawing.Point(666, 55);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(90, 40);
             this.btnEdit.TabIndex = 10;
@@ -197,7 +199,8 @@
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::PetShopProject.Properties.Resources.add_24_white;
-            this.btnAdd.Location = new System.Drawing.Point(396, 72);
+            this.btnAdd.Location = new System.Drawing.Point(572, 55);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(90, 40);
             this.btnAdd.TabIndex = 9;
@@ -211,21 +214,24 @@
             this.lblHr.AutoSize = true;
             this.lblHr.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHr.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblHr.Location = new System.Drawing.Point(-1, 50);
+            this.lblHr.Location = new System.Drawing.Point(-1, 41);
+            this.lblHr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHr.Name = "lblHr";
-            this.lblHr.Size = new System.Drawing.Size(683, 12);
+            this.lblHr.Size = new System.Drawing.Size(859, 7);
             this.lblHr.TabIndex = 8;
             this.lblHr.Text = "_________________________________________________________________________________" +
-    "________________________________";
+    "________________________________________________________________________________" +
+    "__________";
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblTitle.Location = new System.Drawing.Point(-8, 11);
+            this.lblTitle.Location = new System.Drawing.Point(-6, 9);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(341, 39);
+            this.lblTitle.Size = new System.Drawing.Size(272, 31);
             this.lblTitle.TabIndex = 7;
             this.lblTitle.Text = "Product Management";
             // 
@@ -252,19 +258,61 @@
             this.pnlPostData.Controls.Add(this.lblProductID);
             this.pnlPostData.Controls.Add(this.btnCancel);
             this.pnlPostData.Controls.Add(this.btnAddData);
-            this.pnlPostData.Location = new System.Drawing.Point(226, 133);
+            this.pnlPostData.Location = new System.Drawing.Point(309, 107);
+            this.pnlPostData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlPostData.Name = "pnlPostData";
-            this.pnlPostData.Size = new System.Drawing.Size(288, 415);
+            this.pnlPostData.Size = new System.Drawing.Size(289, 397);
             this.pnlPostData.TabIndex = 8;
+            // 
+            // lblSpanRegExProductName
+            // 
+            this.lblSpanRegExProductName.AutoSize = true;
+            this.lblSpanRegExProductName.ForeColor = System.Drawing.Color.Red;
+            this.lblSpanRegExProductName.Location = new System.Drawing.Point(60, 116);
+            this.lblSpanRegExProductName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSpanRegExProductName.Name = "lblSpanRegExProductName";
+            this.lblSpanRegExProductName.Size = new System.Drawing.Size(0, 13);
+            this.lblSpanRegExProductName.TabIndex = 30;
+            // 
+            // lblSpanRegExFrom
+            // 
+            this.lblSpanRegExFrom.AutoSize = true;
+            this.lblSpanRegExFrom.ForeColor = System.Drawing.Color.Red;
+            this.lblSpanRegExFrom.Location = new System.Drawing.Point(92, 359);
+            this.lblSpanRegExFrom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSpanRegExFrom.Name = "lblSpanRegExFrom";
+            this.lblSpanRegExFrom.Size = new System.Drawing.Size(0, 13);
+            this.lblSpanRegExFrom.TabIndex = 29;
+            // 
+            // lblSpanRegExQuantity
+            // 
+            this.lblSpanRegExQuantity.AutoSize = true;
+            this.lblSpanRegExQuantity.ForeColor = System.Drawing.Color.Red;
+            this.lblSpanRegExQuantity.Location = new System.Drawing.Point(92, 244);
+            this.lblSpanRegExQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSpanRegExQuantity.Name = "lblSpanRegExQuantity";
+            this.lblSpanRegExQuantity.Size = new System.Drawing.Size(0, 13);
+            this.lblSpanRegExQuantity.TabIndex = 28;
+            // 
+            // lblSpanRegExPrice
+            // 
+            this.lblSpanRegExPrice.AutoSize = true;
+            this.lblSpanRegExPrice.ForeColor = System.Drawing.Color.Red;
+            this.lblSpanRegExPrice.Location = new System.Drawing.Point(92, 181);
+            this.lblSpanRegExPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSpanRegExPrice.Name = "lblSpanRegExPrice";
+            this.lblSpanRegExPrice.Size = new System.Drawing.Size(0, 13);
+            this.lblSpanRegExPrice.TabIndex = 27;
             // 
             // cbProductTypeID
             // 
             this.cbProductTypeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbProductTypeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProductTypeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProductTypeID.FormattingEnabled = true;
-            this.cbProductTypeID.Location = new System.Drawing.Point(22, 261);
+            this.cbProductTypeID.Location = new System.Drawing.Point(16, 238);
+            this.cbProductTypeID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbProductTypeID.Name = "cbProductTypeID";
-            this.cbProductTypeID.Size = new System.Drawing.Size(250, 28);
+            this.cbProductTypeID.Size = new System.Drawing.Size(257, 28);
             this.cbProductTypeID.TabIndex = 26;
             // 
             // btnClose
@@ -277,10 +325,9 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.Transparent;
             this.btnClose.Image = global::PetShopProject.Properties.Resources.close_24_blue;
-            this.btnClose.Location = new System.Drawing.Point(235, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Location = new System.Drawing.Point(249, -1);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(51, 27);
+            this.btnClose.Size = new System.Drawing.Size(38, 22);
             this.btnClose.TabIndex = 25;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -289,117 +336,128 @@
             // 
             // txtFrom
             // 
-            this.txtFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFrom.ForeColor = System.Drawing.Color.Black;
-            this.txtFrom.Location = new System.Drawing.Point(22, 315);
+            this.txtFrom.Location = new System.Drawing.Point(16, 290);
+            this.txtFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFrom.Name = "txtFrom";
-            this.txtFrom.Size = new System.Drawing.Size(250, 26);
+            this.txtFrom.Size = new System.Drawing.Size(257, 26);
             this.txtFrom.TabIndex = 24;
             this.txtFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFrom_KeyPress);
             // 
             // lblFrom
             // 
             this.lblFrom.AutoSize = true;
-            this.lblFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFrom.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblFrom.Location = new System.Drawing.Point(18, 292);
+            this.lblFrom.Location = new System.Drawing.Point(14, 268);
+            this.lblFrom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(53, 20);
+            this.lblFrom.Size = new System.Drawing.Size(50, 20);
             this.lblFrom.TabIndex = 23;
             this.lblFrom.Text = "From:";
             // 
             // lblProductTypeID
             // 
             this.lblProductTypeID.AutoSize = true;
-            this.lblProductTypeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductTypeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductTypeID.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblProductTypeID.Location = new System.Drawing.Point(18, 238);
+            this.lblProductTypeID.Location = new System.Drawing.Point(14, 216);
+            this.lblProductTypeID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProductTypeID.Name = "lblProductTypeID";
-            this.lblProductTypeID.Size = new System.Drawing.Size(135, 20);
+            this.lblProductTypeID.Size = new System.Drawing.Size(127, 20);
             this.lblProductTypeID.TabIndex = 21;
             this.lblProductTypeID.Text = "Product Type ID:";
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantity.ForeColor = System.Drawing.Color.Black;
-            this.txtQuantity.Location = new System.Drawing.Point(22, 209);
+            this.txtQuantity.Location = new System.Drawing.Point(16, 188);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(250, 26);
+            this.txtQuantity.Size = new System.Drawing.Size(257, 26);
             this.txtQuantity.TabIndex = 20;
             this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
             // 
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblQuantity.Location = new System.Drawing.Point(18, 186);
+            this.lblQuantity.Location = new System.Drawing.Point(12, 166);
+            this.lblQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(71, 20);
+            this.lblQuantity.Size = new System.Drawing.Size(72, 20);
             this.lblQuantity.TabIndex = 19;
-            this.lblQuantity.Text = "Quantity";
+            this.lblQuantity.Text = "Quantity:";
             // 
             // txtPrice
             // 
-            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtPrice.Location = new System.Drawing.Point(22, 157);
+            this.txtPrice.Location = new System.Drawing.Point(16, 138);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(250, 26);
+            this.txtPrice.Size = new System.Drawing.Size(257, 26);
             this.txtPrice.TabIndex = 18;
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblPrice.Location = new System.Drawing.Point(18, 134);
+            this.lblPrice.Location = new System.Drawing.Point(14, 116);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(53, 20);
+            this.lblPrice.Size = new System.Drawing.Size(48, 20);
             this.lblPrice.TabIndex = 17;
             this.lblPrice.Text = "Price:";
             // 
             // txtProductName
             // 
-            this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductName.ForeColor = System.Drawing.Color.Black;
-            this.txtProductName.Location = new System.Drawing.Point(22, 105);
+            this.txtProductName.Location = new System.Drawing.Point(16, 88);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(250, 26);
+            this.txtProductName.Size = new System.Drawing.Size(257, 26);
             this.txtProductName.TabIndex = 16;
             this.txtProductName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProductName_KeyPress);
             // 
             // lblProductName
             // 
             this.lblProductName.AutoSize = true;
-            this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductName.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblProductName.Location = new System.Drawing.Point(18, 82);
+            this.lblProductName.Location = new System.Drawing.Point(14, 71);
+            this.lblProductName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(121, 20);
+            this.lblProductName.Size = new System.Drawing.Size(114, 20);
             this.lblProductName.TabIndex = 15;
             this.lblProductName.Text = "Product Name:";
             // 
             // txtProductID
             // 
-            this.txtProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductID.ForeColor = System.Drawing.Color.Black;
-            this.txtProductID.Location = new System.Drawing.Point(22, 53);
+            this.txtProductID.Location = new System.Drawing.Point(16, 43);
+            this.txtProductID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtProductID.Name = "txtProductID";
-            this.txtProductID.Size = new System.Drawing.Size(250, 26);
+            this.txtProductID.Size = new System.Drawing.Size(257, 26);
             this.txtProductID.TabIndex = 14;
             this.txtProductID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProductID_KeyPress);
             // 
             // lblProductID
             // 
             this.lblProductID.AutoSize = true;
-            this.lblProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductID.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblProductID.Location = new System.Drawing.Point(18, 30);
+            this.lblProductID.Location = new System.Drawing.Point(14, 24);
+            this.lblProductID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProductID.Name = "lblProductID";
-            this.lblProductID.Size = new System.Drawing.Size(94, 20);
+            this.lblProductID.Size = new System.Drawing.Size(89, 20);
             this.lblProductID.TabIndex = 13;
             this.lblProductID.Text = "Product ID:";
             // 
@@ -413,7 +471,8 @@
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = global::PetShopProject.Properties.Resources.close1_24_white;
-            this.btnCancel.Location = new System.Drawing.Point(151, 356);
+            this.btnCancel.Location = new System.Drawing.Point(152, 343);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(90, 40);
             this.btnCancel.TabIndex = 12;
@@ -433,7 +492,8 @@
             this.btnAddData.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddData.ForeColor = System.Drawing.Color.White;
             this.btnAddData.Image = global::PetShopProject.Properties.Resources.check_24_white;
-            this.btnAddData.Location = new System.Drawing.Point(55, 356);
+            this.btnAddData.Location = new System.Drawing.Point(55, 343);
+            this.btnAddData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddData.Name = "btnAddData";
             this.btnAddData.Size = new System.Drawing.Size(90, 40);
             this.btnAddData.TabIndex = 10;
@@ -442,58 +502,17 @@
             this.btnAddData.MouseEnter += new System.EventHandler(this.btnAddData_MouseEnter);
             this.btnAddData.MouseLeave += new System.EventHandler(this.btnAddData_MouseLeave);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // lblSpanRegExPrice
-            // 
-            this.lblSpanRegExPrice.AutoSize = true;
-            this.lblSpanRegExPrice.ForeColor = System.Drawing.Color.Red;
-            this.lblSpanRegExPrice.Location = new System.Drawing.Point(122, 223);
-            this.lblSpanRegExPrice.Name = "lblSpanRegExPrice";
-            this.lblSpanRegExPrice.Size = new System.Drawing.Size(0, 17);
-            this.lblSpanRegExPrice.TabIndex = 27;
-            // 
-            // lblSpanRegExQuantity
-            // 
-            this.lblSpanRegExQuantity.AutoSize = true;
-            this.lblSpanRegExQuantity.ForeColor = System.Drawing.Color.Red;
-            this.lblSpanRegExQuantity.Location = new System.Drawing.Point(122, 300);
-            this.lblSpanRegExQuantity.Name = "lblSpanRegExQuantity";
-            this.lblSpanRegExQuantity.Size = new System.Drawing.Size(0, 17);
-            this.lblSpanRegExQuantity.TabIndex = 28;
-            // 
-            // lblSpanRegExFrom
-            // 
-            this.lblSpanRegExFrom.AutoSize = true;
-            this.lblSpanRegExFrom.ForeColor = System.Drawing.Color.Red;
-            this.lblSpanRegExFrom.Location = new System.Drawing.Point(122, 442);
-            this.lblSpanRegExFrom.Name = "lblSpanRegExFrom";
-            this.lblSpanRegExFrom.Size = new System.Drawing.Size(0, 17);
-            this.lblSpanRegExFrom.TabIndex = 29;
-            // 
-            // lblSpanRegExProductName
-            // 
-            this.lblSpanRegExProductName.AutoSize = true;
-            this.lblSpanRegExProductName.ForeColor = System.Drawing.Color.Red;
-            this.lblSpanRegExProductName.Location = new System.Drawing.Point(80, 143);
-            this.lblSpanRegExProductName.Name = "lblSpanRegExProductName";
-            this.lblSpanRegExProductName.Size = new System.Drawing.Size(0, 17);
-            this.lblSpanRegExProductName.TabIndex = 30;
-            // 
             // ucProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pnlPostData);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvProduct);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ucProducts";
-            this.Size = new System.Drawing.Size(700, 589);
+            this.Size = new System.Drawing.Size(874, 551);
             this.Load += new System.EventHandler(this.ucProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -535,7 +554,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ComboBox cbProductTypeID;
         private System.Windows.Forms.Label lblSpanRegExPrice;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label lblSpanRegExQuantity;
         private System.Windows.Forms.Label lblSpanRegExFrom;
         private System.Windows.Forms.Label lblSpanRegExProductName;
