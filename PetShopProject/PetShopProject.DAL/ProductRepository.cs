@@ -14,13 +14,7 @@ namespace PetShopProject.DAL
         
         public DataTable GetProductList()
         {
-            //var parameters = new List<SqlParameter>()
-            //{
-            //    new SqlParameter { ParameterName = "@DeviceID", SqlDbType = MySqlDbType.VarChar, Value = device.DeviceID.Trim() },
-            //    new SqlParameter { ParameterName = "@DeviceName", MySqlDbType = MySqlDbType.VarChar, Value = device.DeviceName.Trim() },
-            //    new SqlParameter { ParameterName = "@DeviceTypeID", MySqlDbType = MySqlDbType.VarChar, Value = device.DeviceTypeID },
-            //    new SqlParameter { ParameterName = "@UserId", MySqlDbType = MySqlDbType.VarChar, Value = device.UserId }
-            //};
+           
             return ExecuteQueryNonParams("sp_GetProductList");
         } 
         public DataTable GetProductTypeIDList()
@@ -31,11 +25,11 @@ namespace PetShopProject.DAL
         {
             var parameters = new List<SqlParameter>()
             {
-                new SqlParameter { ParameterName = "@MaSanPham", SqlDbType = SqlDbType.VarChar, Value =product.MaSanPham.Trim() },
+                //new SqlParameter { ParameterName = "@MaSanPham", SqlDbType = SqlDbType.VarChar, Value =product.MaSanPham.Trim() },
                 new SqlParameter { ParameterName = "@TenSanPham", SqlDbType = SqlDbType.VarChar, Value =product.TenSanPham.Trim() },
                 new SqlParameter { ParameterName = "@SoLuongSP", SqlDbType = SqlDbType.Int, Value =product.SoLuongSP },
                 new SqlParameter { ParameterName = "@GiaBan", SqlDbType = SqlDbType.Int, Value =product.GiaBan },
-                new SqlParameter { ParameterName = "@MaLoaiSP", SqlDbType = SqlDbType.VarChar, Value =product.MaLoaiSP.Trim() },
+                new SqlParameter { ParameterName = "@MaLoaiSP", SqlDbType = SqlDbType.VarChar, Value =product.MaLoaiSP },
                 new SqlParameter { ParameterName = "@NhaSanXuat", SqlDbType = SqlDbType.VarChar, Value =product.NhaSanXuat.Trim() } 
             };
             return ExecuteNonQuery("sp_AddProduct", parameters);
@@ -44,11 +38,11 @@ namespace PetShopProject.DAL
         {
             var parameters = new List<SqlParameter>()
             {
-                new SqlParameter { ParameterName = "@MaSanPham", SqlDbType = SqlDbType.VarChar, Value =product.MaSanPham.Trim() },
+                new SqlParameter { ParameterName = "@MaSanPham", SqlDbType = SqlDbType.VarChar, Value =product.MaSanPham},
                 new SqlParameter { ParameterName = "@TenSanPham", SqlDbType = SqlDbType.VarChar, Value =product.TenSanPham.Trim() },
                 new SqlParameter { ParameterName = "@SoLuongSP", SqlDbType = SqlDbType.Int, Value =product.SoLuongSP },
                 new SqlParameter { ParameterName = "@GiaBan", SqlDbType = SqlDbType.Int, Value =product.GiaBan },
-                new SqlParameter { ParameterName = "@MaLoaiSP", SqlDbType = SqlDbType.VarChar, Value =product.MaLoaiSP.Trim() },
+                new SqlParameter { ParameterName = "@MaLoaiSP", SqlDbType = SqlDbType.VarChar, Value =product.MaLoaiSP },
                 new SqlParameter { ParameterName = "@NhaSanXuat", SqlDbType = SqlDbType.VarChar, Value =product.NhaSanXuat.Trim() }
             };
             return ExecuteNonQuery("sp_EditProduct", parameters);

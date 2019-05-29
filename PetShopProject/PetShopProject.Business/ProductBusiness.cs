@@ -24,11 +24,12 @@ namespace PetShopProject.Business
             {
                 productLst.Add(new ProductModel()
                 {
-                    MaSanPham = row["MaSanPham"].ToString(),
+                    MaSanPham = Convert.ToInt32(row["MaSanPham"]),
                     TenSanPham = row["TenSanPham"].ToString(),
                     SoLuongSP = Convert.ToInt32(row["SoLuongSP"]),
                     GiaBan = Convert.ToInt32(row["GiaBan"]),
-                    MaLoaiSP = row["MaLoaiSP"].ToString(),
+                    MaLoaiSP = Convert.ToInt32(row["MaLoaiSP"]),
+                    
                     NhaSanXuat = row["NhaSanXuat"].ToString().Trim()
                 });
             }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.MaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +58,11 @@
             this.lblProductID = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAddData = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.lblSpanRegExPrice = new System.Windows.Forms.Label();
+            this.lblSpanRegExQuantity = new System.Windows.Forms.Label();
+            this.lblSpanRegExFrom = new System.Windows.Forms.Label();
+            this.lblSpanRegExProductName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlPostData.SuspendLayout();
@@ -228,6 +234,10 @@
             // 
             this.pnlPostData.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlPostData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlPostData.Controls.Add(this.lblSpanRegExProductName);
+            this.pnlPostData.Controls.Add(this.lblSpanRegExFrom);
+            this.pnlPostData.Controls.Add(this.lblSpanRegExQuantity);
+            this.pnlPostData.Controls.Add(this.lblSpanRegExPrice);
             this.pnlPostData.Controls.Add(this.cbProductTypeID);
             this.pnlPostData.Controls.Add(this.btnClose);
             this.pnlPostData.Controls.Add(this.txtFrom);
@@ -253,7 +263,7 @@
             this.cbProductTypeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProductTypeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProductTypeID.FormattingEnabled = true;
-            this.cbProductTypeID.Location = new System.Drawing.Point(23, 351);
+            this.cbProductTypeID.Location = new System.Drawing.Point(23, 344);
             this.cbProductTypeID.Name = "cbProductTypeID";
             this.cbProductTypeID.Size = new System.Drawing.Size(356, 34);
             this.cbProductTypeID.TabIndex = 26;
@@ -282,7 +292,7 @@
             // 
             this.txtFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFrom.ForeColor = System.Drawing.Color.Black;
-            this.txtFrom.Location = new System.Drawing.Point(23, 430);
+            this.txtFrom.Location = new System.Drawing.Point(23, 409);
             this.txtFrom.Name = "txtFrom";
             this.txtFrom.Size = new System.Drawing.Size(356, 32);
             this.txtFrom.TabIndex = 24;
@@ -293,7 +303,7 @@
             this.lblFrom.AutoSize = true;
             this.lblFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFrom.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblFrom.Location = new System.Drawing.Point(18, 399);
+            this.lblFrom.Location = new System.Drawing.Point(18, 378);
             this.lblFrom.Name = "lblFrom";
             this.lblFrom.Size = new System.Drawing.Size(69, 26);
             this.lblFrom.TabIndex = 23;
@@ -304,7 +314,7 @@
             this.lblProductTypeID.AutoSize = true;
             this.lblProductTypeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductTypeID.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblProductTypeID.Location = new System.Drawing.Point(18, 321);
+            this.lblProductTypeID.Location = new System.Drawing.Point(18, 316);
             this.lblProductTypeID.Name = "lblProductTypeID";
             this.lblProductTypeID.Size = new System.Drawing.Size(174, 26);
             this.lblProductTypeID.TabIndex = 21;
@@ -314,7 +324,7 @@
             // 
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantity.ForeColor = System.Drawing.Color.Black;
-            this.txtQuantity.Location = new System.Drawing.Point(23, 276);
+            this.txtQuantity.Location = new System.Drawing.Point(23, 267);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(356, 32);
             this.txtQuantity.TabIndex = 20;
@@ -325,7 +335,7 @@
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblQuantity.Location = new System.Drawing.Point(18, 245);
+            this.lblQuantity.Location = new System.Drawing.Point(18, 236);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(93, 26);
             this.lblQuantity.TabIndex = 19;
@@ -335,7 +345,7 @@
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtPrice.Location = new System.Drawing.Point(23, 199);
+            this.txtPrice.Location = new System.Drawing.Point(23, 188);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(356, 32);
             this.txtPrice.TabIndex = 18;
@@ -346,7 +356,7 @@
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblPrice.Location = new System.Drawing.Point(18, 168);
+            this.lblPrice.Location = new System.Drawing.Point(18, 157);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(68, 26);
             this.lblPrice.TabIndex = 17;
@@ -356,7 +366,7 @@
             // 
             this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductName.ForeColor = System.Drawing.Color.Black;
-            this.txtProductName.Location = new System.Drawing.Point(23, 119);
+            this.txtProductName.Location = new System.Drawing.Point(23, 108);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(356, 32);
             this.txtProductName.TabIndex = 16;
@@ -367,7 +377,7 @@
             this.lblProductName.AutoSize = true;
             this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductName.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblProductName.Location = new System.Drawing.Point(18, 88);
+            this.lblProductName.Location = new System.Drawing.Point(18, 77);
             this.lblProductName.Name = "lblProductName";
             this.lblProductName.Size = new System.Drawing.Size(158, 26);
             this.lblProductName.TabIndex = 15;
@@ -409,6 +419,7 @@
             this.btnCancel.Size = new System.Drawing.Size(111, 48);
             this.btnCancel.TabIndex = 12;
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             this.btnCancel.MouseEnter += new System.EventHandler(this.btnCancel_MouseEnter);
             this.btnCancel.MouseLeave += new System.EventHandler(this.btnCancel_MouseLeave);
             // 
@@ -431,6 +442,48 @@
             this.btnAddData.Click += new System.EventHandler(this.btnAddData_Click);
             this.btnAddData.MouseEnter += new System.EventHandler(this.btnAddData_MouseEnter);
             this.btnAddData.MouseLeave += new System.EventHandler(this.btnAddData_MouseLeave);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // lblSpanRegExPrice
+            // 
+            this.lblSpanRegExPrice.AutoSize = true;
+            this.lblSpanRegExPrice.ForeColor = System.Drawing.Color.Red;
+            this.lblSpanRegExPrice.Location = new System.Drawing.Point(122, 223);
+            this.lblSpanRegExPrice.Name = "lblSpanRegExPrice";
+            this.lblSpanRegExPrice.Size = new System.Drawing.Size(0, 17);
+            this.lblSpanRegExPrice.TabIndex = 27;
+            // 
+            // lblSpanRegExQuantity
+            // 
+            this.lblSpanRegExQuantity.AutoSize = true;
+            this.lblSpanRegExQuantity.ForeColor = System.Drawing.Color.Red;
+            this.lblSpanRegExQuantity.Location = new System.Drawing.Point(122, 300);
+            this.lblSpanRegExQuantity.Name = "lblSpanRegExQuantity";
+            this.lblSpanRegExQuantity.Size = new System.Drawing.Size(0, 17);
+            this.lblSpanRegExQuantity.TabIndex = 28;
+            // 
+            // lblSpanRegExFrom
+            // 
+            this.lblSpanRegExFrom.AutoSize = true;
+            this.lblSpanRegExFrom.ForeColor = System.Drawing.Color.Red;
+            this.lblSpanRegExFrom.Location = new System.Drawing.Point(122, 442);
+            this.lblSpanRegExFrom.Name = "lblSpanRegExFrom";
+            this.lblSpanRegExFrom.Size = new System.Drawing.Size(0, 17);
+            this.lblSpanRegExFrom.TabIndex = 29;
+            // 
+            // lblSpanRegExProductName
+            // 
+            this.lblSpanRegExProductName.AutoSize = true;
+            this.lblSpanRegExProductName.ForeColor = System.Drawing.Color.Red;
+            this.lblSpanRegExProductName.Location = new System.Drawing.Point(80, 143);
+            this.lblSpanRegExProductName.Name = "lblSpanRegExProductName";
+            this.lblSpanRegExProductName.Size = new System.Drawing.Size(0, 17);
+            this.lblSpanRegExProductName.TabIndex = 30;
             // 
             // ucProducts
             // 
@@ -482,5 +535,10 @@
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ComboBox cbProductTypeID;
+        private System.Windows.Forms.Label lblSpanRegExPrice;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label lblSpanRegExQuantity;
+        private System.Windows.Forms.Label lblSpanRegExFrom;
+        private System.Windows.Forms.Label lblSpanRegExProductName;
     }
 }

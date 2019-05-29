@@ -60,7 +60,7 @@ namespace PetShopProject
             //
             cbProductTypeID.SelectedItem = "";
             cbProductTypeID.DataSource = productBusiness.GetProductTypeIDList();
-            cbProductTypeID.DisplayMember = "MaLoaiSP";
+            cbProductTypeID.DisplayMember = "TenLoaiSP";
             cbProductTypeID.ValueMember = "MaLoaiSP";
 
         }
@@ -81,6 +81,8 @@ namespace PetShopProject
             txtQuantity.ResetText();
             cbProductTypeID.SelectedItem = "";
             txtFrom.ResetText();
+            lblProductID.Hide();
+            txtProductID.Hide();
             //
 
         }
@@ -106,19 +108,21 @@ namespace PetShopProject
             isAdd = false;
             pnlPostData.Show();
             txtProductID.Enabled = false;
+            lblProductID.Show();
+            txtProductID.Show();
             dgvProduct_CellClick(null, null);
 
         }
         private void btnAddData_Click(object sender, EventArgs e)
         {
-            product.MaSanPham = txtProductID.Text.Trim();
             product.TenSanPham = txtProductName.Text.Trim();
             product.GiaBan = int.Parse(txtPrice.Text);
             product.SoLuongSP = int.Parse(txtQuantity.Text);
-            product.MaLoaiSP = cbProductTypeID.SelectedValue.ToString();
+            product.MaLoaiSP = int.Parse(cbProductTypeID.SelectedValue.ToString());
             product.NhaSanXuat = txtFrom.Text.Trim();
             if (isAdd == true)
-            {              
+            {
+                
                 int result = productBusiness.AddProduct(product);
                 if (result == 1)
                 {
@@ -135,6 +139,8 @@ namespace PetShopProject
             }
             else
             {
+                
+                product.MaSanPham = int.Parse(txtProductID.Text);
                 int result = productBusiness.EditProduct(product);
                 if (result == 1)
                 {
@@ -247,6 +253,11 @@ namespace PetShopProject
             if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
+                lblSpanRegExProductName.Text = "Only numbers and characters allowed!";
+            }
+            else
+            {
+                lblSpanRegExProductName.Text = "";
             }
         }
 
@@ -255,6 +266,11 @@ namespace PetShopProject
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+                lblSpanRegExPrice.Text = "Only numbers are allowed!";
+            }
+            else
+            {
+                lblSpanRegExPrice.Text = "";
             }
         }
 
@@ -263,6 +279,12 @@ namespace PetShopProject
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+                lblSpanRegExQuantity.Text = "Only numbers are allowed!";
+
+            }
+            else
+            {
+                lblSpanRegExQuantity.Text = "";
             }
         }
 
@@ -271,6 +293,12 @@ namespace PetShopProject
             if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
+                lblSpanRegExFrom.Text = "Only characters are allowed!";
+
+            }
+            else
+            {
+                lblSpanRegExFrom.Text = "";
             }
         }
 
@@ -306,6 +334,15 @@ namespace PetShopProject
                
             }
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtProductName.ResetText();
+            txtPrice.ResetText();
+            txtQuantity.ResetText();
+            cbProductTypeID.ResetText();
+            txtFrom.ResetText();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace PetShopProject.DAL
         public BaseDAL()
         {
             _connectionString =
-            "Data Source=(local);Initial Catalog=PetShop;Integrated Security=True;";
+            "Data Source=(local);Initial Catalog=PetStore;Integrated Security=True;";
         }
         protected DataTable ExecuteQuery(string storeName, List<SqlParameter> parameters)
         {
