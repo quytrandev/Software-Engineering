@@ -22,7 +22,7 @@ namespace PetShopProject
         private void btnProducts_Click(object sender, EventArgs e)
         {
             this.Controls.Add(ucProducts);
-            ucProducts.Location = new Point(312, 51);
+            ucProducts.Location = new Point(305, 41);
             if (ucProducts.Visible == true)
             {
                 ucProducts.Visible = false;
@@ -103,5 +103,6 @@ namespace PetShopProject
 
         #endregion
 
+        
     }
 }
