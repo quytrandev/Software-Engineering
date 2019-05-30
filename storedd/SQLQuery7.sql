@@ -113,3 +113,28 @@ BEGIN
 	END	
 END
 GO
+
+
+
+
+USE [PetStore]
+GO
+
+/****** Object:  StoredProcedure [dbo].[sp_SearchProduct]    Script Date: 5/30/2019 3:10:52 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROC [dbo].[sp_SearchProduct] @TenSanPham NVARCHAR(50)
+AS
+BEGIN
+	SELECT MaSanPham,TenSanPham,SoLuongSP,GiaBan,MaLoaiSP,NhaSanXuat
+	FROM dbo.SANPHAM
+	WHERE TenSanPham LIKE '%'+@TenSanPham+'%';
+END
+
+
+GO
+
