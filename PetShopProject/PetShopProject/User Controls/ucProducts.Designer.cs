@@ -39,7 +39,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.lblHr = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlPostData = new System.Windows.Forms.Panel();
             this.lblSpanRegExProductName = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.lblProductID = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAddData = new System.Windows.Forms.Button();
+            this.lblHr = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlPostData.SuspendLayout();
@@ -79,7 +79,7 @@
             this.SoLuongSP,
             this.MaLoaiSP,
             this.NhaSanXuat});
-            this.dgvProduct.Location = new System.Drawing.Point(12, 136);
+            this.dgvProduct.Location = new System.Drawing.Point(12, 155);
             this.dgvProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
@@ -137,15 +137,15 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblHr);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Controls.Add(this.lblHr);
             this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Location = new System.Drawing.Point(11, 2);
+            this.panel1.Location = new System.Drawing.Point(20, 10);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1035, 124);
+            this.panel1.Size = new System.Drawing.Size(1035, 141);
             this.panel1.TabIndex = 7;
             // 
             // btnDelete
@@ -158,7 +158,7 @@
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = global::PetShopProject.Properties.Resources.delete_24_white;
-            this.btnDelete.Location = new System.Drawing.Point(897, 70);
+            this.btnDelete.Location = new System.Drawing.Point(887, 79);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 49);
@@ -178,7 +178,7 @@
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = global::PetShopProject.Properties.Resources.edit_24_white;
-            this.btnEdit.Location = new System.Drawing.Point(772, 70);
+            this.btnEdit.Location = new System.Drawing.Point(762, 79);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(120, 49);
@@ -199,7 +199,7 @@
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::PetShopProject.Properties.Resources.add_24_white;
-            this.btnAdd.Location = new System.Drawing.Point(647, 70);
+            this.btnAdd.Location = new System.Drawing.Point(637, 79);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(120, 49);
@@ -209,27 +209,14 @@
             this.btnAdd.MouseEnter += new System.EventHandler(this.btnAdd_MouseEnter);
             this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
             // 
-            // lblHr
-            // 
-            this.lblHr.AutoSize = true;
-            this.lblHr.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHr.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblHr.Location = new System.Drawing.Point(-1, 50);
-            this.lblHr.Name = "lblHr";
-            this.lblHr.Size = new System.Drawing.Size(1031, 12);
-            this.lblHr.TabIndex = 8;
-            this.lblHr.Text = "_________________________________________________________________________________" +
-    "________________________________________________________________________________" +
-    "__________";
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblTitle.Location = new System.Drawing.Point(-8, 11);
+            this.lblTitle.Location = new System.Drawing.Point(-8, 2);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(341, 39);
+            this.lblTitle.Size = new System.Drawing.Size(418, 48);
             this.lblTitle.TabIndex = 7;
             this.lblTitle.Text = "Product Management";
             // 
@@ -256,7 +243,7 @@
             this.pnlPostData.Controls.Add(this.lblProductID);
             this.pnlPostData.Controls.Add(this.btnCancel);
             this.pnlPostData.Controls.Add(this.btnAddData);
-            this.pnlPostData.Location = new System.Drawing.Point(412, 132);
+            this.pnlPostData.Location = new System.Drawing.Point(369, 212);
             this.pnlPostData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlPostData.Name = "pnlPostData";
             this.pnlPostData.Size = new System.Drawing.Size(384, 488);
@@ -491,6 +478,18 @@
             this.btnAddData.MouseEnter += new System.EventHandler(this.btnAddData_MouseEnter);
             this.btnAddData.MouseLeave += new System.EventHandler(this.btnAddData_MouseLeave);
             // 
+            // lblHr
+            // 
+            this.lblHr.AutoSize = true;
+            this.lblHr.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHr.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblHr.Location = new System.Drawing.Point(-1, 50);
+            this.lblHr.Name = "lblHr";
+            this.lblHr.Size = new System.Drawing.Size(905, 12);
+            this.lblHr.TabIndex = 12;
+            this.lblHr.Text = "_________________________________________________________________________________" +
+    "_____________________________________________________________________";
+            // 
             // ucProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -518,7 +517,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label lblHr;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSanPham;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSanPham;
@@ -546,5 +544,6 @@
         private System.Windows.Forms.Label lblSpanRegExQuantity;
         private System.Windows.Forms.Label lblSpanRegExFrom;
         private System.Windows.Forms.Label lblSpanRegExProductName;
+        private System.Windows.Forms.Label lblHr;
     }
 }
