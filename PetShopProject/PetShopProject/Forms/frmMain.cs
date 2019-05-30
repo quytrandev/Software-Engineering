@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetShopProject.User_Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,22 +15,31 @@ namespace PetShopProject
     public partial class frmMain : Form
     {
         ucProducts ucProducts = new ucProducts();
+        ucEmployees ucEmployees = new ucEmployees();
+        ucChangePassword ucChangePassword = new ucChangePassword();
         public frmMain()
         {
             InitializeComponent();
             ucProducts.Visible = false;
+            ucEmployees.Visible = false;
+            ucChangePassword.Visible = false;
         }
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            this.Controls.Add(ucProducts);
-            ucProducts.Location = new Point(227, 34);
+            this.pnlMain.Controls.Add(ucProducts);
+            ucProducts.Dock = DockStyle.Fill;
+            
             if (ucProducts.Visible == true)
             {
                 ucProducts.Visible = false;
+                ucEmployees.Visible = false;
+                ucChangePassword.Visible = false;
             }
             else
             {
                 ucProducts.Visible = true;
+                ucEmployees.Visible = false;
+                ucChangePassword.Visible = false;
             }
         }
 
@@ -103,6 +113,46 @@ namespace PetShopProject
 
         #endregion
 
-        
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            this.pnlMain.Controls.Add(ucEmployees);
+            ucEmployees.Dock = DockStyle.Fill;
+            if (ucEmployees.Visible == true)
+            {
+                ucEmployees.Visible = false;
+                ucProducts.Visible = false;
+                ucChangePassword.Visible = false;
+            }
+            else
+            {
+                ucEmployees.Visible = true;
+                ucProducts.Visible = false;
+                ucChangePassword.Visible = false;
+            }
+        }
+
+        private void pnlMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnChangePass_Click(object sender, EventArgs e)
+        {
+            this.pnlMain.Controls.Add(ucChangePassword);
+            ucChangePassword.Dock = DockStyle.Fill;
+
+            if (ucChangePassword.Visible == true)
+            {
+                ucChangePassword.Visible = false;
+                ucProducts.Visible = false;
+                ucEmployees.Visible = false;
+            }
+            else
+            {
+                ucChangePassword.Visible = true;
+                ucProducts.Visible = false;
+                ucEmployees.Visible = false;
+            }
+        }
     }
 }

@@ -60,6 +60,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Controls\ucChangePassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ucChangePassword.Designer.cs">
+      <DependentUpon>ucChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\ucEmployees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ucEmployees.Designer.cs">
+      <DependentUpon>ucEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\ucProducts.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -82,6 +94,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="User Controls\ucChangePassword.resx">
+      <DependentUpon>ucChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\ucEmployees.resx">
+      <DependentUpon>ucEmployees.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\ucProducts.resx">
       <DependentUpon>ucProducts.cs</DependentUpon>
     </EmbeddedResource>
