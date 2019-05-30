@@ -63,5 +63,25 @@ namespace PetShopProject.DAL
             };
             return ExecuteQuery("sp_SearchProduct",parameters);
         }
+        #region 
+        // Huyen Tim kiem San Pham theo ten
+        public DataTable searchProduct(string productName)
+        {
+            var parameters = new List<SqlParameter>()
+            {
+                new SqlParameter {ParameterName="@TenSP",SqlDbType= SqlDbType.VarChar,Value=productName}
+            };
+            return ExecuteQuery("sp_searchProduct", parameters);
+        }
+        public DataTable searchProduct(int productId)
+        {
+            var parameters = new List<SqlParameter>()
+            {
+                new SqlParameter {ParameterName="@MaPro",SqlDbType= SqlDbType.Int,Value=productId}
+            };
+            return ExecuteQuery("sp_searchPro", parameters);
+        }
+
+        #endregion
     }
 }

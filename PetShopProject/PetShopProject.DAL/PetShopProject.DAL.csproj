@@ -43,9 +43,19 @@
   <ItemGroup>
     <Compile Include="AccountRepository.cs" />
     <Compile Include="BaseDAL.cs" />
+    <Compile Include="BaseDAL1.cs" />
+    <Compile Include="CategoryRepository.cs" />
     <Compile Include="EmployeeRepository.cs" />
+    <Compile Include="InvoiceRepository.cs" />
+    <Compile Include="ListofProinInvoiceRepository.cs.cs" />
     <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\ChiTietHoaDon.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\HoaDon.cs" />
+    <Compile Include="Models\KhachHang.cs" />
+    <Compile Include="Models\LoaiNhanVien.cs" />
+    <Compile Include="Models\LoaiSanPham.cs" />
+    <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\PetShopModel.cs" />
     <Compile Include="ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

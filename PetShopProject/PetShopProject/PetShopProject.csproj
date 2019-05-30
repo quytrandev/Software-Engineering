@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\formCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formCart.Designer.cs">
+      <DependentUpon>formCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,11 +66,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Controls\ucCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ucCart.Designer.cs">
+      <DependentUpon>ucCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\ucCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ucCategory.designer.cs">
+      <DependentUpon>ucCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\ucChangePassword.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User Controls\ucChangePassword.Designer.cs">
       <DependentUpon>ucChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\ucCreateAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ucCreateAccount.Designer.cs">
+      <DependentUpon>ucCreateAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="User Controls\ucEmployees.cs">
       <SubType>UserControl</SubType>
@@ -72,12 +96,27 @@
     <Compile Include="User Controls\ucEmployees.Designer.cs">
       <DependentUpon>ucEmployees.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\ucInvoices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ucInvoices.designer.cs">
+      <DependentUpon>ucInvoices.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\ucProducts.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User Controls\ucProducts.Designer.cs">
       <DependentUpon>ucProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\usCashier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\usCashier.Designer.cs">
+      <DependentUpon>usCashier.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\formCart.resx">
+      <DependentUpon>formCart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,14 +133,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="User Controls\ucCart.resx">
+      <DependentUpon>ucCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\ucCategory.resx">
+      <DependentUpon>ucCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\ucChangePassword.resx">
       <DependentUpon>ucChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\ucCreateAccount.resx">
+      <DependentUpon>ucCreateAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\ucEmployees.resx">
       <DependentUpon>ucEmployees.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\ucInvoices.resx">
+      <DependentUpon>ucInvoices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\ucProducts.resx">
       <DependentUpon>ucProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\usCashier.resx">
+      <DependentUpon>usCashier.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

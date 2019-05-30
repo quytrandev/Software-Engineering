@@ -74,5 +74,16 @@ namespace PetShopProject.Business
             }
             return productLst;
         }
+        #region 
+        // Huyen tim kiem san pham
+        public DataTable searchPro(string proname)
+        {
+            return _productRepository.searchProduct(proname);
+        }
+        public DataTable searchPro(int proid)
+        {
+            return _productRepository.searchProduct(proid);
+        }
+        #endregion
     }
 }

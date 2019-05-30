@@ -42,7 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountBusiness.cs" />
+    <Compile Include="CategoryBusiness.cs" />
     <Compile Include="EmployeeBusiness.cs" />
+    <Compile Include="InvoiceBusiness.cs" />
+    <Compile Include="ListofProBusiness.cs" />
     <Compile Include="ProductBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
