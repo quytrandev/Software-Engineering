@@ -55,5 +55,13 @@ namespace PetShopProject.DAL
             };
             return ExecuteNonQuery("sp_DeleteProduct", parameters);
         }
+        public DataTable SearchProduct(string productName)
+        {
+            var parameters = new List<SqlParameter>
+            {
+                new SqlParameter { ParameterName = "@TenSanPham", SqlDbType = SqlDbType.NChar, Value =productName }
+            };
+            return ExecuteQuery("sp_SearchProduct",parameters);
+        }
     }
 }

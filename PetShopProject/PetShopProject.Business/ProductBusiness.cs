@@ -55,5 +55,24 @@ namespace PetShopProject.Business
             int result = _productRepository.DeleteProduct(productID);
             return result;
         }
+        public List<ProductModel> GetSearchList(string productName)
+        {
+            DataTable dt = _productRepository.SearchProduct(productName);
+            List<ProductModel> productLst = new List<ProductModel>();
+            foreach (DataRow row in dt.Rows)
+            {
+                productLst.Add(new ProductModel()
+                {
+                    MaSanPham = Convert.ToInt32(row["MaSanPham"]),
+                    TenSanPham = row["TenSanPham"].ToString(),
+                    SoLuongSP = Convert.ToInt32(row["SoLuongSP"]),
+                    GiaBan = Convert.ToInt32(row["GiaBan"]),
+                    MaLoaiSP = Convert.ToInt32(row["MaLoaiSP"]),
+
+                    NhaSanXuat = row["NhaSanXuat"].ToString().Trim()
+                });
+            }
+            return productLst;
+        }
     }
 }

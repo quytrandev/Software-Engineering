@@ -344,5 +344,21 @@ namespace PetShopProject
             cbProductTypeID.ResetText();
             txtFrom.ResetText();
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+       {
+
+            if (txtSearch.Text == "")
+            {
+                loadData();
+            }
+            else
+            {
+                var source = new BindingSource();
+                source.DataSource = productBusiness.GetSearchList(txtSearch.Text.Trim()); ;
+                dgvProduct.DataSource = source;
+            }
+
+        }
     }
 }

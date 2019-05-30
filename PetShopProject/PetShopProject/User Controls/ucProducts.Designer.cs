@@ -36,9 +36,6 @@
             this.MaLoaiSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NhaSanXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlPostData = new System.Windows.Forms.Panel();
             this.lblSpanRegExProductName = new System.Windows.Forms.Label();
@@ -46,7 +43,6 @@
             this.lblSpanRegExQuantity = new System.Windows.Forms.Label();
             this.lblSpanRegExPrice = new System.Windows.Forms.Label();
             this.cbProductTypeID = new System.Windows.Forms.ComboBox();
-            this.btnClose = new System.Windows.Forms.Button();
             this.txtFrom = new System.Windows.Forms.TextBox();
             this.lblFrom = new System.Windows.Forms.Label();
             this.lblProductTypeID = new System.Windows.Forms.Label();
@@ -58,12 +54,19 @@
             this.lblProductName = new System.Windows.Forms.Label();
             this.txtProductID = new System.Windows.Forms.TextBox();
             this.lblProductID = new System.Windows.Forms.Label();
+            this.lblHr = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAddData = new System.Windows.Forms.Button();
-            this.lblHr = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlPostData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvProduct
@@ -137,6 +140,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.lblHr);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnEdit);
@@ -147,67 +152,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1035, 141);
             this.panel1.TabIndex = 7;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Tomato;
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
-            this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Image = global::PetShopProject.Properties.Resources.delete_24_white;
-            this.btnDelete.Location = new System.Drawing.Point(887, 79);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 49);
-            this.btnDelete.TabIndex = 11;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            this.btnDelete.MouseEnter += new System.EventHandler(this.btnDelete_MouseEnter);
-            this.btnDelete.MouseLeave += new System.EventHandler(this.btnDelete_MouseLeave);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Image = global::PetShopProject.Properties.Resources.edit_24_white;
-            this.btnEdit.Location = new System.Drawing.Point(762, 79);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(120, 49);
-            this.btnEdit.TabIndex = 10;
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            this.btnEdit.MouseEnter += new System.EventHandler(this.btnEdit_MouseEnter);
-            this.btnEdit.MouseLeave += new System.EventHandler(this.btnEdit_MouseLeave);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Image = global::PetShopProject.Properties.Resources.add_24_white;
-            this.btnAdd.Location = new System.Drawing.Point(637, 79);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(120, 49);
-            this.btnAdd.TabIndex = 9;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            this.btnAdd.MouseEnter += new System.EventHandler(this.btnAdd_MouseEnter);
-            this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
             // 
             // lblTitle
             // 
@@ -295,26 +239,6 @@
             this.cbProductTypeID.Name = "cbProductTypeID";
             this.cbProductTypeID.Size = new System.Drawing.Size(341, 33);
             this.cbProductTypeID.TabIndex = 26;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClose.Image = global::PetShopProject.Properties.Resources.close_24_blue;
-            this.btnClose.Location = new System.Drawing.Point(332, -1);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(51, 27);
-            this.btnClose.TabIndex = 25;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
-            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
             // txtFrom
             // 
@@ -437,6 +361,48 @@
             this.lblProductID.TabIndex = 13;
             this.lblProductID.Text = "Product ID:";
             // 
+            // lblHr
+            // 
+            this.lblHr.AutoSize = true;
+            this.lblHr.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHr.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblHr.Location = new System.Drawing.Point(-1, 50);
+            this.lblHr.Name = "lblHr";
+            this.lblHr.Size = new System.Drawing.Size(905, 12);
+            this.lblHr.TabIndex = 12;
+            this.lblHr.Text = "_________________________________________________________________________________" +
+    "_____________________________________________________________________";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(15, 89);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(253, 30);
+            this.txtSearch.TabIndex = 13;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClose.Image = global::PetShopProject.Properties.Resources.close_24_blue;
+            this.btnClose.Location = new System.Drawing.Point(332, -1);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(51, 27);
+            this.btnClose.TabIndex = 25;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
+            // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Tomato;
@@ -478,17 +444,76 @@
             this.btnAddData.MouseEnter += new System.EventHandler(this.btnAddData_MouseEnter);
             this.btnAddData.MouseLeave += new System.EventHandler(this.btnAddData_MouseLeave);
             // 
-            // lblHr
+            // pictureBox1
             // 
-            this.lblHr.AutoSize = true;
-            this.lblHr.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHr.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblHr.Location = new System.Drawing.Point(-1, 50);
-            this.lblHr.Name = "lblHr";
-            this.lblHr.Size = new System.Drawing.Size(905, 12);
-            this.lblHr.TabIndex = 12;
-            this.lblHr.Text = "_________________________________________________________________________________" +
-    "_____________________________________________________________________";
+            this.pictureBox1.Image = global::PetShopProject.Properties.Resources.search_24_black;
+            this.pictureBox1.Location = new System.Drawing.Point(275, 89);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Tomato;
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = global::PetShopProject.Properties.Resources.delete_24_white;
+            this.btnDelete.Location = new System.Drawing.Point(887, 79);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(120, 49);
+            this.btnDelete.TabIndex = 11;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.MouseEnter += new System.EventHandler(this.btnDelete_MouseEnter);
+            this.btnDelete.MouseLeave += new System.EventHandler(this.btnDelete_MouseLeave);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Image = global::PetShopProject.Properties.Resources.edit_24_white;
+            this.btnEdit.Location = new System.Drawing.Point(762, 79);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(120, 49);
+            this.btnEdit.TabIndex = 10;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.MouseEnter += new System.EventHandler(this.btnEdit_MouseEnter);
+            this.btnEdit.MouseLeave += new System.EventHandler(this.btnEdit_MouseLeave);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = global::PetShopProject.Properties.Resources.add_24_white;
+            this.btnAdd.Location = new System.Drawing.Point(637, 79);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(120, 49);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.MouseEnter += new System.EventHandler(this.btnAdd_MouseEnter);
+            this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
             // 
             // ucProducts
             // 
@@ -507,6 +532,7 @@
             this.panel1.PerformLayout();
             this.pnlPostData.ResumeLayout(false);
             this.pnlPostData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -545,5 +571,7 @@
         private System.Windows.Forms.Label lblSpanRegExFrom;
         private System.Windows.Forms.Label lblSpanRegExProductName;
         private System.Windows.Forms.Label lblHr;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
