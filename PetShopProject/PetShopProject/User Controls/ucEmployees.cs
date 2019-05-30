@@ -157,7 +157,7 @@ namespace PetShopProject.User_Controls
         
         private void btnAddData_Click(object sender, EventArgs e)
         {
-            Employee.MaNhanVien = int.Parse(txtAge.Text);
+            Employee.MaNhanVien = int.Parse(txtEmployeeID.Text);
             Employee.TenNhanVien = txtEmployeeName.Text.Trim();
             Employee.Tuoi = int.Parse(txtAge.Text);
             Employee.SoDT = txtPhoneNumber.Text;

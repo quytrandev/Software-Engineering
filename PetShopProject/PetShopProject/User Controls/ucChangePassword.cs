@@ -25,13 +25,14 @@ namespace PetShopProject.User_Controls
 
         private void txtCurrentPass_TextChanged(object sender, EventArgs e)
         {
-
+            txtCurrentPass.UseSystemPasswordChar = true;
         }
         
         private void btnOK_Click(object sender, EventArgs e)
         {
-            txtUsername.Text = account.TenDangNhap;
-            //account.TenDangNhap = txtUsername.Text.Trim();
+            
+            account.TenDangNhap = frmLogin.username;
+            
             account.MatKhau = txtCurrentPass.Text.Trim();
             account.MatKhauMoi = txtNewPass.Text.Trim();
             
@@ -91,6 +92,27 @@ namespace PetShopProject.User_Controls
         private void btnCancel_Click(object sender, EventArgs e)
         {
             pnlChangePass.Hide();
+        }
+
+        private void ucChangePassword_Load(object sender, EventArgs e)
+        {
+            txtUsername.Text = frmLogin.username;
+            txtUsername.Enabled = false;
+        }
+
+        private void txtNewPass_TextChanged(object sender, EventArgs e)
+        {
+            txtNewPass.UseSystemPasswordChar = true;
+        }
+
+        private void txtRetype_TextChanged(object sender, EventArgs e)
+        {
+            txtRetype.UseSystemPasswordChar = true;
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

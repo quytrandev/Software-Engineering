@@ -154,5 +154,15 @@ namespace PetShopProject
                 ucEmployees.Visible = false;
             }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

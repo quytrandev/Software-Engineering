@@ -16,6 +16,7 @@ namespace PetShopProject
     {
         private AccountBusiness accountBusiness;
         private AccountModel account;
+        public static string username;
         public frmLogin()
         {
             InitializeComponent();
@@ -162,8 +163,10 @@ namespace PetShopProject
                     bool result = accountBusiness.Login(account);
                     if (result == true)
                     {
+                        username = txtUsername.Text;
                         MessageBox.Show("Đăng nhập thành công", "Thông báo",
                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         this.Hide();
                         Form frm = new frmMain();
                         frm.ShowDialog();
