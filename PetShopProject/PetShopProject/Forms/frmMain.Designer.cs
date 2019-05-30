@@ -36,7 +36,6 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -52,9 +51,9 @@
             this.pnlMenu.Controls.Add(this.btnLogOut);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
-            this.pnlMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(220, 639);
+            this.pnlMenu.Size = new System.Drawing.Size(293, 786);
             this.pnlMenu.TabIndex = 0;
             // 
             // btnChangePass
@@ -68,14 +67,16 @@
             this.btnChangePass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangePass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePass.ForeColor = System.Drawing.Color.White;
-            this.btnChangePass.Location = new System.Drawing.Point(0, 371);
-            this.btnChangePass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChangePass.Location = new System.Drawing.Point(0, 458);
+            this.btnChangePass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChangePass.Name = "btnChangePass";
-            this.btnChangePass.Size = new System.Drawing.Size(220, 67);
+            this.btnChangePass.Size = new System.Drawing.Size(293, 82);
             this.btnChangePass.TabIndex = 4;
             this.btnChangePass.Text = "Change Password";
             this.btnChangePass.UseVisualStyleBackColor = false;
             this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
+            this.btnChangePass.MouseEnter += new System.EventHandler(this.btnChangePass_MouseEnter);
+            this.btnChangePass.MouseLeave += new System.EventHandler(this.btnChangePass_MouseLeave);
             // 
             // btnEmployees
             // 
@@ -88,14 +89,16 @@
             this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployees.ForeColor = System.Drawing.Color.White;
-            this.btnEmployees.Location = new System.Drawing.Point(0, 438);
-            this.btnEmployees.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEmployees.Location = new System.Drawing.Point(0, 540);
+            this.btnEmployees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(220, 67);
+            this.btnEmployees.Size = new System.Drawing.Size(293, 82);
             this.btnEmployees.TabIndex = 3;
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.UseVisualStyleBackColor = false;
             this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
+            this.btnEmployees.MouseEnter += new System.EventHandler(this.btnEmployees_MouseEnter);
+            this.btnEmployees.MouseLeave += new System.EventHandler(this.btnEmployees_MouseLeave);
             // 
             // btnProducts
             // 
@@ -108,10 +111,10 @@
             this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProducts.ForeColor = System.Drawing.Color.White;
-            this.btnProducts.Location = new System.Drawing.Point(0, 505);
-            this.btnProducts.Margin = new System.Windows.Forms.Padding(2);
+            this.btnProducts.Location = new System.Drawing.Point(0, 622);
+            this.btnProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(220, 67);
+            this.btnProducts.Size = new System.Drawing.Size(293, 82);
             this.btnProducts.TabIndex = 2;
             this.btnProducts.Text = "Products";
             this.btnProducts.UseVisualStyleBackColor = false;
@@ -122,10 +125,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PetShopProject.Properties.Resources.panda1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -44);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(0, -54);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(220, 275);
+            this.pictureBox1.Size = new System.Drawing.Size(293, 338);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -141,10 +144,10 @@
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 572);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 704);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(220, 67);
+            this.btnLogOut.Size = new System.Drawing.Size(293, 82);
             this.btnLogOut.TabIndex = 0;
             this.btnLogOut.Text = "Sign out";
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -157,10 +160,10 @@
             this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(220, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(293, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(797, 26);
+            this.panel2.Size = new System.Drawing.Size(1063, 32);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -174,34 +177,25 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.Transparent;
             this.btnClose.Image = global::PetShopProject.Properties.Resources.close_24_white;
-            this.btnClose.Location = new System.Drawing.Point(735, 0);
+            this.btnClose.Location = new System.Drawing.Point(980, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(62, 27);
+            this.btnClose.Size = new System.Drawing.Size(83, 33);
             this.btnClose.TabIndex = 12;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
             this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
-            // pnlMain
-            // 
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(220, 26);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(797, 613);
-            this.pnlMain.TabIndex = 2;
-            this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
-            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 639);
-            this.Controls.Add(this.pnlMain);
+            this.ClientSize = new System.Drawing.Size(1356, 786);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
@@ -220,7 +214,6 @@
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnProducts;
-        private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Button btnEmployees;
         private System.Windows.Forms.Button btnChangePass;
     }

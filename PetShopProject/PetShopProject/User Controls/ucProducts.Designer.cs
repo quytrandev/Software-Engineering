@@ -39,7 +39,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.lblHr = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlPostData = new System.Windows.Forms.Panel();
             this.lblSpanRegExProductName = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.lblProductID = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAddData = new System.Windows.Forms.Button();
+            this.lblHr = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlPostData.SuspendLayout();
@@ -79,12 +79,12 @@
             this.SoLuongSP,
             this.MaLoaiSP,
             this.NhaSanXuat});
-            this.dgvProduct.Location = new System.Drawing.Point(15, 112);
-            this.dgvProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProduct.Location = new System.Drawing.Point(12, 155);
+            this.dgvProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowTemplate.Height = 24;
-            this.dgvProduct.Size = new System.Drawing.Size(843, 418);
+            this.dgvProduct.Size = new System.Drawing.Size(1016, 545);
             this.dgvProduct.TabIndex = 1;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             // 
@@ -137,15 +137,15 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblHr);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Controls.Add(this.lblHr);
             this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Location = new System.Drawing.Point(8, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(20, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(858, 101);
+            this.panel1.Size = new System.Drawing.Size(1035, 141);
             this.panel1.TabIndex = 7;
             // 
             // btnDelete
@@ -158,10 +158,10 @@
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = global::PetShopProject.Properties.Resources.delete_24_white;
-            this.btnDelete.Location = new System.Drawing.Point(760, 55);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Location = new System.Drawing.Point(887, 79);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(90, 40);
+            this.btnDelete.Size = new System.Drawing.Size(120, 49);
             this.btnDelete.TabIndex = 11;
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -178,10 +178,10 @@
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = global::PetShopProject.Properties.Resources.edit_24_white;
-            this.btnEdit.Location = new System.Drawing.Point(666, 55);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEdit.Location = new System.Drawing.Point(762, 79);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(90, 40);
+            this.btnEdit.Size = new System.Drawing.Size(120, 49);
             this.btnEdit.TabIndex = 10;
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -199,39 +199,24 @@
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::PetShopProject.Properties.Resources.add_24_white;
-            this.btnAdd.Location = new System.Drawing.Point(572, 55);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Location = new System.Drawing.Point(637, 79);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(90, 40);
+            this.btnAdd.Size = new System.Drawing.Size(120, 49);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             this.btnAdd.MouseEnter += new System.EventHandler(this.btnAdd_MouseEnter);
             this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
             // 
-            // lblHr
-            // 
-            this.lblHr.AutoSize = true;
-            this.lblHr.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHr.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblHr.Location = new System.Drawing.Point(-1, 41);
-            this.lblHr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblHr.Name = "lblHr";
-            this.lblHr.Size = new System.Drawing.Size(859, 7);
-            this.lblHr.TabIndex = 8;
-            this.lblHr.Text = "_________________________________________________________________________________" +
-    "________________________________________________________________________________" +
-    "__________";
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblTitle.Location = new System.Drawing.Point(-6, 9);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Location = new System.Drawing.Point(-8, 2);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(272, 31);
+            this.lblTitle.Size = new System.Drawing.Size(418, 48);
             this.lblTitle.TabIndex = 7;
             this.lblTitle.Text = "Product Management";
             // 
@@ -258,50 +243,46 @@
             this.pnlPostData.Controls.Add(this.lblProductID);
             this.pnlPostData.Controls.Add(this.btnCancel);
             this.pnlPostData.Controls.Add(this.btnAddData);
-            this.pnlPostData.Location = new System.Drawing.Point(309, 107);
-            this.pnlPostData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPostData.Location = new System.Drawing.Point(369, 212);
+            this.pnlPostData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlPostData.Name = "pnlPostData";
-            this.pnlPostData.Size = new System.Drawing.Size(289, 397);
+            this.pnlPostData.Size = new System.Drawing.Size(384, 488);
             this.pnlPostData.TabIndex = 8;
             // 
             // lblSpanRegExProductName
             // 
             this.lblSpanRegExProductName.AutoSize = true;
             this.lblSpanRegExProductName.ForeColor = System.Drawing.Color.Red;
-            this.lblSpanRegExProductName.Location = new System.Drawing.Point(60, 116);
-            this.lblSpanRegExProductName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSpanRegExProductName.Location = new System.Drawing.Point(80, 143);
             this.lblSpanRegExProductName.Name = "lblSpanRegExProductName";
-            this.lblSpanRegExProductName.Size = new System.Drawing.Size(0, 13);
+            this.lblSpanRegExProductName.Size = new System.Drawing.Size(0, 17);
             this.lblSpanRegExProductName.TabIndex = 30;
             // 
             // lblSpanRegExFrom
             // 
             this.lblSpanRegExFrom.AutoSize = true;
             this.lblSpanRegExFrom.ForeColor = System.Drawing.Color.Red;
-            this.lblSpanRegExFrom.Location = new System.Drawing.Point(92, 359);
-            this.lblSpanRegExFrom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSpanRegExFrom.Location = new System.Drawing.Point(123, 442);
             this.lblSpanRegExFrom.Name = "lblSpanRegExFrom";
-            this.lblSpanRegExFrom.Size = new System.Drawing.Size(0, 13);
+            this.lblSpanRegExFrom.Size = new System.Drawing.Size(0, 17);
             this.lblSpanRegExFrom.TabIndex = 29;
             // 
             // lblSpanRegExQuantity
             // 
             this.lblSpanRegExQuantity.AutoSize = true;
             this.lblSpanRegExQuantity.ForeColor = System.Drawing.Color.Red;
-            this.lblSpanRegExQuantity.Location = new System.Drawing.Point(92, 244);
-            this.lblSpanRegExQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSpanRegExQuantity.Location = new System.Drawing.Point(123, 300);
             this.lblSpanRegExQuantity.Name = "lblSpanRegExQuantity";
-            this.lblSpanRegExQuantity.Size = new System.Drawing.Size(0, 13);
+            this.lblSpanRegExQuantity.Size = new System.Drawing.Size(0, 17);
             this.lblSpanRegExQuantity.TabIndex = 28;
             // 
             // lblSpanRegExPrice
             // 
             this.lblSpanRegExPrice.AutoSize = true;
             this.lblSpanRegExPrice.ForeColor = System.Drawing.Color.Red;
-            this.lblSpanRegExPrice.Location = new System.Drawing.Point(92, 181);
-            this.lblSpanRegExPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSpanRegExPrice.Location = new System.Drawing.Point(123, 223);
             this.lblSpanRegExPrice.Name = "lblSpanRegExPrice";
-            this.lblSpanRegExPrice.Size = new System.Drawing.Size(0, 13);
+            this.lblSpanRegExPrice.Size = new System.Drawing.Size(0, 17);
             this.lblSpanRegExPrice.TabIndex = 27;
             // 
             // cbProductTypeID
@@ -309,10 +290,10 @@
             this.cbProductTypeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProductTypeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProductTypeID.FormattingEnabled = true;
-            this.cbProductTypeID.Location = new System.Drawing.Point(16, 238);
-            this.cbProductTypeID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbProductTypeID.Location = new System.Drawing.Point(21, 293);
+            this.cbProductTypeID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbProductTypeID.Name = "cbProductTypeID";
-            this.cbProductTypeID.Size = new System.Drawing.Size(257, 28);
+            this.cbProductTypeID.Size = new System.Drawing.Size(341, 33);
             this.cbProductTypeID.TabIndex = 26;
             // 
             // btnClose
@@ -325,9 +306,10 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.Transparent;
             this.btnClose.Image = global::PetShopProject.Properties.Resources.close_24_blue;
-            this.btnClose.Location = new System.Drawing.Point(249, -1);
+            this.btnClose.Location = new System.Drawing.Point(332, -1);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(38, 22);
+            this.btnClose.Size = new System.Drawing.Size(51, 27);
             this.btnClose.TabIndex = 25;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -338,10 +320,10 @@
             // 
             this.txtFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFrom.ForeColor = System.Drawing.Color.Black;
-            this.txtFrom.Location = new System.Drawing.Point(16, 290);
-            this.txtFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFrom.Location = new System.Drawing.Point(21, 357);
+            this.txtFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFrom.Name = "txtFrom";
-            this.txtFrom.Size = new System.Drawing.Size(257, 26);
+            this.txtFrom.Size = new System.Drawing.Size(341, 30);
             this.txtFrom.TabIndex = 24;
             this.txtFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFrom_KeyPress);
             // 
@@ -350,10 +332,9 @@
             this.lblFrom.AutoSize = true;
             this.lblFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFrom.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblFrom.Location = new System.Drawing.Point(14, 268);
-            this.lblFrom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFrom.Location = new System.Drawing.Point(19, 330);
             this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(50, 20);
+            this.lblFrom.Size = new System.Drawing.Size(63, 25);
             this.lblFrom.TabIndex = 23;
             this.lblFrom.Text = "From:";
             // 
@@ -362,10 +343,9 @@
             this.lblProductTypeID.AutoSize = true;
             this.lblProductTypeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductTypeID.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblProductTypeID.Location = new System.Drawing.Point(14, 216);
-            this.lblProductTypeID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProductTypeID.Location = new System.Drawing.Point(19, 266);
             this.lblProductTypeID.Name = "lblProductTypeID";
-            this.lblProductTypeID.Size = new System.Drawing.Size(127, 20);
+            this.lblProductTypeID.Size = new System.Drawing.Size(159, 25);
             this.lblProductTypeID.TabIndex = 21;
             this.lblProductTypeID.Text = "Product Type ID:";
             // 
@@ -373,10 +353,10 @@
             // 
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantity.ForeColor = System.Drawing.Color.Black;
-            this.txtQuantity.Location = new System.Drawing.Point(16, 188);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtQuantity.Location = new System.Drawing.Point(21, 231);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(257, 26);
+            this.txtQuantity.Size = new System.Drawing.Size(341, 30);
             this.txtQuantity.TabIndex = 20;
             this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
             // 
@@ -385,10 +365,9 @@
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblQuantity.Location = new System.Drawing.Point(12, 166);
-            this.lblQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblQuantity.Location = new System.Drawing.Point(16, 204);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(72, 20);
+            this.lblQuantity.Size = new System.Drawing.Size(91, 25);
             this.lblQuantity.TabIndex = 19;
             this.lblQuantity.Text = "Quantity:";
             // 
@@ -396,10 +375,10 @@
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtPrice.Location = new System.Drawing.Point(16, 138);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrice.Location = new System.Drawing.Point(21, 170);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(257, 26);
+            this.txtPrice.Size = new System.Drawing.Size(341, 30);
             this.txtPrice.TabIndex = 18;
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
@@ -408,10 +387,9 @@
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblPrice.Location = new System.Drawing.Point(14, 116);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrice.Location = new System.Drawing.Point(19, 143);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(48, 20);
+            this.lblPrice.Size = new System.Drawing.Size(62, 25);
             this.lblPrice.TabIndex = 17;
             this.lblPrice.Text = "Price:";
             // 
@@ -419,10 +397,10 @@
             // 
             this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductName.ForeColor = System.Drawing.Color.Black;
-            this.txtProductName.Location = new System.Drawing.Point(16, 88);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProductName.Location = new System.Drawing.Point(21, 108);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(257, 26);
+            this.txtProductName.Size = new System.Drawing.Size(341, 30);
             this.txtProductName.TabIndex = 16;
             this.txtProductName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProductName_KeyPress);
             // 
@@ -431,10 +409,9 @@
             this.lblProductName.AutoSize = true;
             this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductName.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblProductName.Location = new System.Drawing.Point(14, 71);
-            this.lblProductName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProductName.Location = new System.Drawing.Point(19, 87);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(114, 20);
+            this.lblProductName.Size = new System.Drawing.Size(142, 25);
             this.lblProductName.TabIndex = 15;
             this.lblProductName.Text = "Product Name:";
             // 
@@ -442,10 +419,10 @@
             // 
             this.txtProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductID.ForeColor = System.Drawing.Color.Black;
-            this.txtProductID.Location = new System.Drawing.Point(16, 43);
-            this.txtProductID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProductID.Location = new System.Drawing.Point(21, 53);
+            this.txtProductID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProductID.Name = "txtProductID";
-            this.txtProductID.Size = new System.Drawing.Size(257, 26);
+            this.txtProductID.Size = new System.Drawing.Size(341, 30);
             this.txtProductID.TabIndex = 14;
             this.txtProductID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProductID_KeyPress);
             // 
@@ -454,10 +431,9 @@
             this.lblProductID.AutoSize = true;
             this.lblProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductID.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblProductID.Location = new System.Drawing.Point(14, 24);
-            this.lblProductID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProductID.Location = new System.Drawing.Point(19, 30);
             this.lblProductID.Name = "lblProductID";
-            this.lblProductID.Size = new System.Drawing.Size(89, 20);
+            this.lblProductID.Size = new System.Drawing.Size(109, 25);
             this.lblProductID.TabIndex = 13;
             this.lblProductID.Text = "Product ID:";
             // 
@@ -471,10 +447,10 @@
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = global::PetShopProject.Properties.Resources.close1_24_white;
-            this.btnCancel.Location = new System.Drawing.Point(152, 343);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Location = new System.Drawing.Point(203, 422);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(90, 40);
+            this.btnCancel.Size = new System.Drawing.Size(120, 49);
             this.btnCancel.TabIndex = 12;
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -492,27 +468,39 @@
             this.btnAddData.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddData.ForeColor = System.Drawing.Color.White;
             this.btnAddData.Image = global::PetShopProject.Properties.Resources.check_24_white;
-            this.btnAddData.Location = new System.Drawing.Point(55, 343);
-            this.btnAddData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddData.Location = new System.Drawing.Point(73, 422);
+            this.btnAddData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddData.Name = "btnAddData";
-            this.btnAddData.Size = new System.Drawing.Size(90, 40);
+            this.btnAddData.Size = new System.Drawing.Size(120, 49);
             this.btnAddData.TabIndex = 10;
             this.btnAddData.UseVisualStyleBackColor = false;
             this.btnAddData.Click += new System.EventHandler(this.btnAddData_Click);
             this.btnAddData.MouseEnter += new System.EventHandler(this.btnAddData_MouseEnter);
             this.btnAddData.MouseLeave += new System.EventHandler(this.btnAddData_MouseLeave);
             // 
+            // lblHr
+            // 
+            this.lblHr.AutoSize = true;
+            this.lblHr.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHr.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblHr.Location = new System.Drawing.Point(-1, 50);
+            this.lblHr.Name = "lblHr";
+            this.lblHr.Size = new System.Drawing.Size(905, 12);
+            this.lblHr.TabIndex = 12;
+            this.lblHr.Text = "_________________________________________________________________________________" +
+    "_____________________________________________________________________";
+            // 
             // ucProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pnlPostData);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvProduct);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucProducts";
-            this.Size = new System.Drawing.Size(874, 551);
+            this.Size = new System.Drawing.Size(1038, 717);
             this.Load += new System.EventHandler(this.ucProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -529,7 +517,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label lblHr;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSanPham;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSanPham;
@@ -557,5 +544,6 @@
         private System.Windows.Forms.Label lblSpanRegExQuantity;
         private System.Windows.Forms.Label lblSpanRegExFrom;
         private System.Windows.Forms.Label lblSpanRegExProductName;
+        private System.Windows.Forms.Label lblHr;
     }
 }
