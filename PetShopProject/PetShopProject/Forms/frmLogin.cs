@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PetShopProject.Business;
+using PetShopProject.DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace PetShopProject
 {
     public partial class frmLogin : Form
     {
+        private AccountBusiness accountBusiness;
+        private AccountModel account;
         public frmLogin()
         {
             InitializeComponent();
@@ -19,10 +23,12 @@ namespace PetShopProject
             panel1.Location = new Point(
             this.ClientSize.Width / 2 - panel1.Size.Width / 2,
             this.ClientSize.Height / 2 - panel1.Size.Height / 2);
+            accountBusiness = new AccountBusiness();
+            account = new AccountModel();
            
         }
        
-        public static string UserName;
+        //public static string UserName;
         // ẩn/hiện password
         private void ShowPassword()
         {
@@ -105,59 +111,79 @@ namespace PetShopProject
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //enter để đăng nhập
-            if (e.KeyChar == 13)
-            {
-                string username = txtUsername.Text;
-                string password = txtPassword.Text;
+            ////enter để đăng nhập
+            //if (e.KeyChar == 13)
+            //{
+            //    string username = txtUsername.Text;
+            //    string password = txtPassword.Text;
 
-                try
-                {
-                    //if (loginBL.CheckLogin(username, password))
-                    //{
-                    //    UserName = username;
-                    //    frmProducts frm = new frmProducts();
-                    //    this.Hide();
-                    //    frm.Show();
-                    //}
-                }
-                catch
-                {
-                    //Form frm = new frmWP();
-                    //frm.ShowDialog();
-                    this.btnSignIn.BackgroundImage = null;
-                    this.btnSignIn.BackColor = System.Drawing.Color.Black;
-                    this.txtUsername.Focus();
-                    txtUsername.ResetText();
-                    txtPassword.ResetText();
-                }
-            }
+            //    try
+            //    {
+            //        //if (loginBL.CheckLogin(username, password))
+            //        //{
+            //        //    UserName = username;
+            //        //    frmProducts frm = new frmProducts();
+            //        //    this.Hide();
+            //        //    frm.Show();
+            //        //}
+            //    }
+            //    catch
+            //    {
+            //        //Form frm = new frmWP();
+            //        //frm.ShowDialog();
+            //        this.btnSignIn.BackgroundImage = null;
+            //        this.btnSignIn.BackColor = System.Drawing.Color.Black;
+            //        this.txtUsername.Focus();
+            //        txtUsername.ResetText();
+            //        txtPassword.ResetText();
+            //    }
+            //}
+        }
+
+        bool Login()
+        {
+            return false;
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            //btn đăng nhập
-            string username = txtUsername.Text.ToString();
-            string password = txtPassword.Text.ToString();
-            try
+
+            account.TenDangNhap = txtUsername.Text.Trim();
+            account.MatKhau = txtPassword.Text.Trim();
+
+            if(txtUsername.Text.Trim() =="" || txtPassword.Text.Trim() == "")
             {
-                //if (loginBL.CheckLogin(username, password))
-                //{
-                //    UserName = username;
-                //    frmProducts frm = new frmProducts();
-                //    this.Hide();
-                //    frm.Show();
-                //}
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
             }
-            catch
+            else
             {
-                //Form frm = new frmWP();
-                //frm.ShowDialog();
-                this.btnSignIn.BackgroundImage = null;
-                this.btnSignIn.BackColor = System.Drawing.Color.Black;
-                this.txtUsername.Focus();
-                txtUsername.ResetText();
-                txtPassword.ResetText();
+                try
+                {
+                    bool result = accountBusiness.Login(account);
+                    if (result == true)
+                    {
+                        MessageBox.Show("Đăng nhập thành công", "Thông báo",
+                           MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        Form frm = new frmMain();
+                        frm.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đăng nhập thất bại !!!", "Thông báo",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtUsername.ResetText();
+                        txtPassword.ResetText();
+                        txtUsername.Focus();
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Lỗi kết nối !!!",
+                    "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUsername.Focus();
+                }
             }
 
         }
