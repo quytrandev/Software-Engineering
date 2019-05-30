@@ -11,5 +11,6 @@ namespace PetShopProject.DAL.Models
         public string TenDangNhap { get; set; }
         public string MatKhau { get; set; }
         public string MatKhauMoi { get; set; }
+        public int MaLoaiNV { get; set; }
     }
 }
